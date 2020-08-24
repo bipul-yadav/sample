@@ -7,6 +7,7 @@
  */
 
 import React, { Component } from 'react';
+import codePush from "react-native-code-push";
 import {
   SafeAreaView,
   StyleSheet,
@@ -34,6 +35,12 @@ class App extends Component{
     )
   }
 }
+
+
+
+
+
+const MyApp = codePush(App);
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -74,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default MyApp;
