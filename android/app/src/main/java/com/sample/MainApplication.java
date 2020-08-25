@@ -1,5 +1,6 @@
 package com.sample;
 
+import com.microsoft.codepush.react.CodePush;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -19,19 +20,26 @@ public class MainApplication extends Application implements ReactApplication {
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
+        @Override
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
+        }
 
         @Override
         protected List<ReactPackage> getPackages() {
+
+          
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+              package.add(new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG))
           return packages;
         }
 
         @Override
-        protected String getJSMainModuleName() {
-          return "index";
+        protected String getJSBundleFile() {
+          return CodePush.getJSBundleFile();
         }
       };
 

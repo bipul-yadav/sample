@@ -40,7 +40,7 @@ class App extends Component{
 
 
 
-const MyApp = codePush(App);
+// const MyApp = codePush(App);
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -81,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyApp;
+export default codePush()(App);
