@@ -28,20 +28,16 @@ public class MainApplication extends Application implements ReactApplication {
         @Override
         protected List<ReactPackage> getPackages() {
           return Arrays.<ReactPackage>asList(
-            new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG),
-            new MainReactPackage()
+            new MainReactPackage(),
+            new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG)
+            
 
           
           
       );
-          
-          
-        }
+      }
 
-        @Override
-        protected String getJSBundleFile() {
-          return CodePush.getJSBundleFile();
-        }
+        
       };
 
   @Override
