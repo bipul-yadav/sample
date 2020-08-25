@@ -28,9 +28,14 @@ import {
 class App extends Component{
   state={}
   render(){
+    console.log("okokok")
     return(
       <View>
         <Text>Hello World</Text>
+        <Text>Hello World</Text>
+        <Text>Hello World</Text>
+        <Text>Hello World</Text>
+         
       </View>
     )
   }
@@ -40,7 +45,7 @@ class App extends Component{
 
 
 
-// const MyApp = codePush(App);
+ const MyApp = codePush(App);
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     color: Colors.dark,
-    fontSize: 12,
+    fontSize: 22,
     fontWeight: '600',
     padding: 4,
     paddingRight: 12,
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default codePush()(App);
+export default MyApp;
 
 // @SuppressWarnings("UnnecessaryLocalVariable")
           // List<ReactPackage> packages = new PackageList(this).getPackages();

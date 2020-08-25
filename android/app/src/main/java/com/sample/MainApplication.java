@@ -1,7 +1,11 @@
 package com.sample;
 
 import com.microsoft.codepush.react.CodePush;
+
+import java.util.List;
+import java.util.Arrays;
 import com.facebook.react.shell.MainReactPackage;
+import com.facebook.react.ReactPackage;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
@@ -26,17 +30,16 @@ public class MainApplication extends Application implements ReactApplication {
             return CodePush.getJSBundleFile();
         }
 
+
         @Override
         protected List<ReactPackage> getPackages() {
-          return Arrays.<ReactPackage>asList(
-            new MainReactPackage(),
-            new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG)
-            
-
-          
-          
-      );
-      }
+          @SuppressWarnings("UnnecessaryLocalVariable")
+          List<ReactPackage> packages = new PackageList(this).getPackages();
+          // Packages that cannot be autolinked yet can be added manually here, for example:
+           
+           packages.add(new CodePush(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG));
+            return packages;
+        }
 
         
       };
