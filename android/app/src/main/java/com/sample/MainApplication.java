@@ -1,6 +1,7 @@
 package com.sample;
 
 import com.microsoft.codepush.react.CodePush;
+import com.facebook.react.shell.MainReactPackage;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
