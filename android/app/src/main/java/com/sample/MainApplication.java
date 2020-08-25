@@ -27,14 +27,14 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-
+          return Arrays.</ReactPackage>ReactPackage>asList(
+            new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG),
+            new MainReactPackage()
           
-          @SuppressWarnings("UnnecessaryLocalVariable")
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
-              package.add(new CodePush("Dn1wOnsxXfl-jyr2RffQw1MN1nVrthx_Q3eot", MainApplication.this, BuildConfig.DEBUG))
-          return packages;
+          
+      );
+          
+          
         }
 
         @Override
